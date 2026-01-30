@@ -1,5 +1,5 @@
 <p align="center"><img src="./img/LaTeX.png" width="500"   alt=" " /></p>
-<h1 align="center"> LaTeX cv vscode </h1> 
+<h1 align="center"> LaTeX CV + Visual Studio Code </h1> 
 <h4 align="right">Jan 26</h4>
 
 <p>
