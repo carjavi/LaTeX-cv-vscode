@@ -20,7 +20,7 @@ Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. LaT
 # Install
 1. Instalar latex-full<br> 
 Para Windows MiKTeX: https://miktex.org/download<br>
-> :bulb: **Tip:**linux TeX Live full. https://tug.org/texlive/. (version muy pesada, about 9Gb)
+> :bulb: **Tip:** En linux esta ***TeX Live full***. https://tug.org/texlive/. (version muy pesada, about 9Gb)
 
 2. Update Miktek GUI ```(indispensable)```<br>
 por consola:
@@ -42,7 +42,7 @@ latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error carjavi_cv
 latexmk -C # limpiar los errores
 ```
 si todo sale bien se creara un archivo .PDF <br>
-> :warning: **Warning:**no se puede compilar con pdflatex
+> :warning: **Warning:** No se puede compilar con pdflatex, esta configuración trabaja solo con ***XeLaTeX***.
  
 5. Instalar extensión en VS Code
 	1. En VS Code, ve a Extensions ***Ctrl + Shift + X***
@@ -85,7 +85,7 @@ si todo sale bien se creara un archivo .PDF <br>
    2. Presiona ***Ctrl + Alt + B*** (o busca "Build" en la paleta de comandos).
    3. Debería compilar con latexmk -xelatex automáticamente y generar el archivo .PDF
 
-> :warning: **Warning:** en la carpeta del proyecto deben estar los 3 archivos principales:<br>
+> :warning: **Warning:** En la carpeta del proyecto deben estar los 3 archivos principales:<br>
  ```*.tex ```Archivo de texto plano que contiene código LaTeX (comandos, estructura, contenido). <br>
  ```*.sty ``` Son complementos o "plugins" que añaden funcionalidades específicas. comandos nuevos que no vienen por defecto en LaTeX (manejo de imágenes, colores, márgenes, hipervínculos). <br>
  ```*.cls ``` Es el esqueleto o la estructura global del documento. Se invoca siempre en la primera línea del archivo .tex con el comando \documentclass{nombre_de_la_clase}. clase personalizada (define estilos, colores, comandos como \cvitem, \skillbar).
