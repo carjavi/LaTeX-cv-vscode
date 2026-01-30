@@ -11,11 +11,25 @@
 
 # Table of contents
 - [Table of contents](#table-of-contents)
+- [Porque no usar Overleaf?](#porque-no-usar-overleaf)
 - [Install](#install)
 
 <br>
 
-Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. LaTeX = lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc.). Fue probado en Windows, pero debria funcionar igual en linux.
+Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. <br>
+
+```LaTeX``` lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc.). Fue probado en Windows, pero debria funcionar igual en linux.
+
+<br>
+
+# Porque no usar Overleaf?
+<p align="center"><img src="./img/overleaf.jpg" width="200"   alt=" " /></p>
+* El plan gratuito tiene límites de compilaciones automáticas simultáneas y menos tiempo de compilación en proyectos grandes. <br>
+* Espacio y número de colaboradores limitado en el plan free.<br>
+* Dependencia de internet para editar (aunque hay modo offline con planes pagos).<br>
+* Puede ser más lento con proyectos muy grandes comparado a compilar localmente.<br>
+  
+<br>
 
 # Install
 1. Instalar latex-full<br> 
