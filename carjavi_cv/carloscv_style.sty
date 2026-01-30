@@ -1,0 +1,47 @@
+\ProvidesPackage{carloscv_style}
+
+% --- Configuración de Hipervínculos ---
+\hypersetup{
+    colorlinks=true,
+    linkcolor=cvteal,
+    urlcolor=cvteal,
+    pdftitle={CV Carlos Briceño},
+    pdfauthor={Carlos Briceño},
+    pdfsubject={Electronic Engineer CV},
+}
+
+% --- Definición de Iconos (Mapeo a FontAwesome 5) ---
+% Usamos \textcolor{cvteal} para que coincida con tu estética
+\newcommand{\iconEmail}{\textcolor{cvteal}{\faEnvelope}}
+\newcommand{\iconPhone}{\textcolor{cvteal}{\faMobile*}}
+\newcommand{\iconGithub}{\textcolor{cvteal}{\faGithub}}
+\newcommand{\iconLinkedin}{\textcolor{cvteal}{\faLinkedin}}
+\newcommand{\iconGlobe}{\textcolor{cvteal}{\faGlobe}}
+\newcommand{\iconBriefcase}{\textcolor{cvteal}{\faBriefcase}}
+\newcommand{\iconGraduation}{\textcolor{cvteal}{\faGraduationCap}}
+\newcommand{\iconLightbulb}{\textcolor{cvteal}{\faLightbulb}}
+
+
+% Icono personalizado reemplazado por FontAwesome Globe
+\newcommand{\iconCarjavi}[1]{%
+    \textcolor{cvteal}{\faGlobe}%
+}
+
+% --- Configuración de Listas (Itemize) ---
+% Ajustado para que no ocupe demasiado espacio vertical
+\setlist[itemize]{
+    leftmargin=*, 
+    noitemsep, 
+    topsep=2pt, 
+    parsep=2pt,
+    label=\textcolor{cvteal}{\tiny$\bullet$}
+}
+
+% --- Ajustes de Tablas ---
+% Elimina el espacio extra a los lados de las tablas de información
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.2}
+
+% --- Notas para el usuario ---
+% Este archivo requiere que el archivo .cls defina el color 'cvteal'.
+% Si cambias el color en el .cls, se actualizará automáticamente aquí.
