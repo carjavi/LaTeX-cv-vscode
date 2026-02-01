@@ -1,185 +1,225 @@
 \documentclass{carloscv}
 \usepackage{carloscv_style}
+\usepackage{paracol}
+
+% ----------------- Preambulo -------------------------------------------
+
+% --- Show Last Update ---
+\usepackage[english]{babel} % para que \today esté en inglés
+\usepackage{fontspec}
+\usepackage{tikz}
+\usepackage{xcolor}
+\definecolor{miGris}{HTML}{C8C8CA} % color #c8c8ca
+% Carga Titillium desde la carpeta fonts/
+\newfontfamily\titilliumfont[Path=./fonts/,Extension=.otf]{TitilliumMaps26L003}
+\newfontfamily\arialfont{Arial} % usa Arial instalada en el sistema para las comillas grandes
+\definecolor{quoteGray}{HTML}{CDCDCC} % color de las comillas (#cdcdcc)
+
+% viñetas circulares para separar habilidades
+\newcommand{\skillsep}{\tikz[baseline=-0.6ex]{\fill[black] (0,0) circle (1.5pt);}\hspace{0.6em}\allowbreak}
+
+% Separador de skills con permiso de salto de línea
+
+
+
+% --- DEFINICIÓN DE COMANDOS PERSONALIZADOS ---
+
+\newcommand{\workentry}[5]{%
+    \noindent
+    \textbf{#1} \hspace{0.2em} #2 \hspace{0.5em} \href{http://#3}{\textcolor{black}{\textit{#3}}} \\
+    {\fontsize{11}{13}\selectfont\textcolor{cvteal}{#4}\hspace{0.5em}\textit{#5}}%
+}
 
 \begin{document}
+
+% --- Show Last Update ---
+\begin{tikzpicture}[remember picture,overlay]
+  \node[
+    anchor=south,
+    yshift=1.0cm,
+    text=miGris,
+    font=\titilliumfont\fontsize{7}{10}\selectfont
+  ] at (current page.south) {%
+    {\MakeUppercase{Last Updated on \today. Compiled in }}\LaTeX{}\MakeUppercase{. ATS Friendly}
+  };
+\end{tikzpicture}
+
+
+% ==== ENCABEZADO ====
+\noindent
 \begin{minipage}[t]{0.60\textwidth}
     \vspace*{0pt}
     \begin{center}
-        % BRICEÑO con MyriadPro-BoldCond.otf
         {\fontsize{48}{45}\namefontA BRICEÑO }%
-        % CARLOS con TitilliumMaps26L003.otf
         {\fontsize{44.5}{43}\namefontB CARLOS}\\[4pt]
-        % Subtítulo centrado con TitilliumMaps26L003.otf
         {\fontsize{14}{17}\subtitlefont Electronic Engineer / I+D+I Engineer / Developer IoT}
     \end{center}
-\end{minipage}
-\begin{minipage}[t]{0.60\textwidth}
+\end{minipage}%
+\hfill%
+\begin{minipage}[t]{0.38\textwidth}
     \vspace*{-7pt}
-    % Logo personalizado "cAR" / "JAvi" + URL
-    \hspace*{2.6cm}%
-    \raisebox{-1.2ex}{% Ajusta posición vertical del logo "cAR/JAvi"
-        \begin{minipage}[c]{1.2cm}% Ajusta ancho del bloque de texto
-            {\fontsize{13}{13}\starjedifont\selectfont\textcolor{cvteal}{% COLOR TURQUESA
-            \setlength{\baselineskip}{8pt}% Ajusta espaciado entre líneas
-            cAR\\[-4pt]% Ajusta espaciado específico entre "cAR" y "JAvi"
+    \hspace*{1.5cm}%
+    \raisebox{-1.2ex}{%
+        \begin{minipage}[c]{1.2cm}%
+            {\fontsize{13}{13}\starjedifont\selectfont\textcolor{cvteal}{%
+            \setlength{\baselineskip}{8pt}%
+            cAR\\[-4pt]%
             JAvi}}%
         \end{minipage}%
     }%
-    \hspace{0.05cm}% Ajusta espacio horizontal entre logo y URL
-    \raisebox{-1.5ex}{% Ajusta posición vertical de la URL (independiente del logo)
-        {\fontsize{12}{13}\selectfont\href{http://www.carjavi.com}{\textcolor{black}{www.carjavi.com}}}%
+    \hspace{0.05cm}%
+    \raisebox{-1.5ex}{%
+        {\fontsize{11}{13}\selectfont\href{http://www.carjavi.com}{\textcolor{black}{www.carjavi.com}}}%
     }%
     \\[4pt]
-    % Email
-    \hfill\hspace*{2.5cm}{\fontsize{13}{15}\selectfont\textbf{\textcolor{cvteal}{Email:}}} {\fontsize{12}{13}\selectfont\href{mailto:carjavi@hotmail.com}{\textcolor{black}{carjavi@hotmail.com}}} \\[3pt]
-    % Mobile
-    \hfill\hspace*{2.3cm}{\fontsize{13}{15}\selectfont\textbf{\textcolor{cvteal}{Mobile:}}} {\fontsize{12}{13}\selectfont +569 8611 6068} \\[2pt]
-    % GitHub
-    \hfill\hspace*{3.2cm}{\fontsize{15}{17}\selectfont\raisebox{-0.3ex}{\textcolor{cvteal}{\iconGithub}}} {\fontsize{12}{13}\selectfont\href{https://carjavi.github.io}{\textcolor{black}{carjavi.github.io}}}\\[1pt]
+    \hfill\hspace*{1.4cm}{\fontsize{12}{15}\selectfont\textbf{\textcolor{cvteal}{Email:}}} {\fontsize{11}{13}\selectfont\href{mailto:carjavi@hotmail.com}{\textcolor{black}{carjavi@hotmail.com}}} \\[3pt]
+    \hfill\hspace*{1.2cm}{\fontsize{12}{15}\selectfont\textbf{\textcolor{cvteal}{Mobile:}}} {\fontsize{11}{13}\selectfont\href{https://wa.me/+56986116068}{\textcolor{black}{+569 8611 6068}}} \\[2pt]
+    \hfill\hspace*{2.0cm}{\fontsize{14}{17}\selectfont\raisebox{-0.3ex}{\textcolor{cvteal}{\iconGithub}}} {\fontsize{11}{13}\selectfont\href{https://carjavi.github.io}{\textcolor{black}{carjavi.github.io}}}\\[1pt]
 \end{minipage}
-\vspace{8pt}
-% Línea separadora 
-\noindent\rule{\textwidth}{4.5pt}
-\vspace{4pt}
 
-\begin{multicols}{2}
+\vspace{0pt}
+% ==== LINEA SEPARADORA =========================================================================================================================================
+\noindent\rule{\textwidth}{4.5pt} 
+\vspace{-10pt} 
 
-% ==== COLUMNA IZQUIERDA ====
+% ==== CONFIGURACIÓN DE COLUMNAS ====
+\columnratio{0.64}
+\setlength{\columnsep}{1.5em}
 
-\section{Work Experience \iconBriefcase}
+\begin{paracol}{2}
 
-\cvitem{2018 - Currently}{MAQUINTEL}{Senior Electronics Engineer}{Santiago, Chile}
-\small
-\textit{www.maquintel.com}
-\begin{itemize}
-    \item Manufacturing, assembly, repair and maintenance of robots for mining process inpections.
-    \item Industrial Pipeline Inspection Robots, Tailings Channel Inspection Robots, ROV Sumergible and Smart Pigs Pipelines Prototype.
-    \item Co-inventor of Innovation Patent: \href{https://patents.google.com/patent/CL2021002215A1}{CL2021002215A1}.
-\end{itemize}
-\normalsize
+    % ==== COLUMNA IZQUIERDA ======================================================================================================================================
+    
+    \section{\texorpdfstring{WORK EXPERIENCE \raisebox{0.3ex}{\iconBriefcase}}{WORK EXPERIENCE}}
+    
+    % --- MAQUINTEL ---
+    \workentry{2018 - Currently}{MAQUINTEL}{www.maquintel.com}{Senior Electronics Engineer. Santiago, Chile}
+    {\subtitlefont\fontsize{9}{12}\selectfont
+    \begin{itemize}
+        \item Manufacturing, assembly, repair and maintenance of robots for mining process inpections. Industrial Pipeline Inspection Robots, Tailings Channel Inspection Robots, ROV Sumergible and Smart Pigs Pipelines Prototype.
+        \item Bluerobotic ROV operator technician
+        \item Technical Operator of Inspection Equipment in Mines (BHP, Anglo America, Codelco, Teck, Collahuasi)
+        \item IoT hardware development with LoRaWAN for monitoring
+        \item Co-inventor of Innovation Patent: \\
+        {\urlstyle{same}\nolinkurl{https://patents.google.com/patent/CL2021002215A1/en}}
+    \end{itemize}
+    }
+    \vspace{4pt}
+    
+    % --- BC TECNOLOGIA ---
+    \workentry{2017 - 2018}{BC TECNOLOGIA}{www.bctecnologia.com}{IoT Developer (Internet of Things). Santiago, Chile}
+    {\subtitlefont\fontsize{9}{12}\selectfont
+    \begin{itemize}
+        \item Manufacture of Prototype of purchase button based on ESP32 Chip, similar to the Dash Button of Amazon. Project for Cencosud S.A. Chile.
+        \item Designer PCB and Developer AWS Platform (AWS SDK NodeJS, AWS Lambda and REST APIs Vtex Platform e-commerce).
+    \end{itemize}
+    }
+    \vspace{4pt}
+    
+    % --- FRACTTAL ---
+    \workentry{2016 - 2017}{FRACTTAL}{www.fracttal.com}{I+D+I Engineer. Santiago, Chile}
+    {\subtitlefont\fontsize{9}{12}\selectfont
+    \begin{itemize}
+        \item Design and manufacturing Fracttal Box \& Fracttal On-Board prototypes, first versions of current Fracttal Sense IoT hardware.
+        \item PCB-Layout Engineer, Operator Neoden4 (Pick and Place Machine), Developer IoT.
+    \end{itemize}
+    }
+    \vspace{4pt}
+    
+    % --- 3D INSIDE ---
+    \workentry{2016 - 2018}{3D INSIDE}{www.3dinside.cl}{Technical Support. Santiago, Chile}
+    {\subtitlefont\fontsize{9}{12}\selectfont
+    \begin{itemize}
+        \item Technical support for 3D Printer, repair and maintenance (Makerbot, Prusa, Witbox, Formlabs, Mbot 3D, Leapfrog, Ultimaker, BCN3D Sigma, BQ Hephestos).
+    \end{itemize}
+    }
+    \vspace{4pt}
+    
+    % --- VECZO ---
+    \workentry{2016 - 2017}{VECZO}{www.veczo.cl}{Embedded Systems Programming. Santiago, Chile}
+    {\subtitlefont\fontsize{9}{12}\selectfont
+    \begin{itemize}
+        \item Programmer of Microcontrollers and embedded systems for projects linked to Myoelectric prostheses (MPLAB XC8 Compiler, PIC).
+    \end{itemize}
+    }
+    
+    
+    
+    \section{\texorpdfstring{EDUCATION \raisebox{0.3ex}{\iconGraduation}}{EDUCATION}}
+    
+    \cvitem{2009 - 2014}{Electronic Engineer}{Instituto Universitario Politécnico Santiago Mariño}{Maracay, Venezuela}
+    
+    
+ 
+    
+    \section{\texorpdfstring{PERSONAL PROJECTS \raisebox{0.3ex}{\iconLightbulb}}{PROJECTS}}
+    {\fontsize{10}{12}\selectfont
+    \begin{itemize}
+        \item Warehouse Robot Prototype — \href{https://example.com/warehouse-robot}{\textcolor{black}{example.com/warehouse-robot}}
+        \item PBOT - Publicity Robot Prototype — \href{https://example.com/pbot}{\textcolor{black}{example.com/pbot}}
+        \item ROSI - Social Interaction Robot Prototype — \href{https://example.com/rosi}{\textcolor{black}{example.com/rosi}}
+        \item Design and manufacture 3D printer Pi851 — \href{https://example.com/pi851}{\textcolor{black}{example.com/pi851}}
+    \end{itemize}
+    }
 
-\vspace{6pt}
+    % ==== CAMBIO A COLUMNA DERECHA ====
+    \switchcolumn
+    
+    \section{\texorpdfstring{ABOUT ME \raisebox{0.3ex}{\iconUser}}{ABOUT ME}}
+    \begin{tabular}{@{}l>{\titilliumfont\fontsize{10}{14}\selectfont}l}
+        \textbf{Name:} & Briceño B. Carlos J. \\
+        \textbf{Nationality:} & Venezuelan \\
+        \textbf{Location:} & Santiago Centro, Chile \\
+        \textbf{LinkedIn:} & \href{https://linkedin.com/in/carjavi}{\textcolor{black}{linkedin.com/in/carjavi}} \\
+        \textbf{GitHub:} & \href{https://github.com/carjavi}{\textcolor{black}{github.com/carjavi}} \\
+    \end{tabular}
+    
+ 
+    
+    \section{\texorpdfstring{PROFILE SUMMARY \raisebox{0.3ex}{\iconProfile}}{PROFILE SUMMARY}}
+    \vspace*{8pt}
+    \noindent
+    % Comilla
+    {\arialfont\fontsize{70}{35}\selectfont\color{quoteGray}\smash{\raisebox{-0.95ex}{“}}}%
+    % Texto Justificado
+    {\titilliumfont\fontsize{11}{14}\selectfont
+    Senior electronics engineer with many years of work experience, passionate about robotics, electronics, and IoT. Committed to continuous learning and staying up-to-date with emerging technologies. Seeking a position that allows me to grow and develop professionally, both in hardware and software, leveraging new and emerging trends" \par}
+        
+        
+    
+    \section{\texorpdfstring{SKILLS \raisebox{0.3ex}{\iconSkills}}{SKILLS}}
+    % Technologies
+    {\sectionfont\fontsize{10}{12}\selectfont\textcolor{black}{Technologies:}}\\
+    \noindent
+    \begin{minipage}{\linewidth}
+    {\titilliumfont\fontsize{9}{12}\selectfont\raggedright
+    Linux \skillsep Embedded Software \skillsep JavaScript \skillsep Node.js \skillsep Python \skillsep C++ \skillsep Github | Bitbucket \skillsep Docker \skillsep Photoshop \skillsep IoT \skillsep LoRaWan \skillsep PCB Design Eagles \skillsep 3D Design Fusion360 \skillsep 3D Printing FDM | SLA \skillsep \LaTeX \skillsep SQLite \skillsep MPLAB XC8 Compiler \skillsep Wamp \skillsep Soldering SMT/THT \skillsep Repair 3D Printers \skillsep P\&P Machine Operator (Neoden4) 
+    \par}
+    \end{minipage}\\[6pt]
+    % Hardware
+    {\sectionfont\fontsize{10}{12}\selectfont\textcolor{black}{Hardware:}}\\
+    \noindent
+    \begin{minipage}{\linewidth}
+    {\titilliumfont\fontsize{9}{12}\selectfont\raggedright
+    Arduino AVR | ARM \skillsep Microcontrollers ESP32 | STM32 | PIC \skillsep Raspberry Pi \skillsep Omega2S \skillsep Intel Edison \skillsep  Electronic equipment repairer
+    \par}
+    \end{minipage}
+        
+   
+    
+    \section{\texorpdfstring{LANGUAGES \raisebox{0ex}{\iconLanguage}}{LANGUAGES}}
+    \begin{tabular}{@{}l>{\titilliumfont\fontsize{9}{12}\selectfont}l}
+    {\sectionfont\fontsize{10}{12}\selectfont\textcolor{black}{{Spanish:}}} & Native \\
+    {\sectionfont\fontsize{10}{12}\selectfont\textcolor{black}{{English:}}} & Competent user \\
+    \end{tabular}
+    
+    
+    
+    \section{\texorpdfstring{INTERESTS \raisebox{0.3ex}{\iconInterests}}{INTERESTS}}
+    {\titilliumfont\fontsize{9}{12}\selectfont
+    HTML \skillsep CSS \skillsep React \skillsep Mongo DB \skillsep AWS \skillsep AZURE 
+    }
 
-\cvitem{2017 - 2018}{BC TECNOLOGIA}{IoT Developer (Internet of Things)}{Santiago, Chile}
-\small
-\textit{www.bctecnologia.com}
-\begin{itemize}
-    \item Manufacture of Prototype of purchase button based on ESP32 Chip, similar to the Dash Button of Amazon. Project for Cencosud S.A. Chile.
-    \item Designer PCB and Developer AWS Platform (AWS SDK NodeJS, AWS Lambda and REST APIs Vtex Platform e-commerce).
-\end{itemize}
-\normalsize
-
-\vspace{6pt}
-
-\cvitem{2016 - 2017}{FRACTTAL}{I+D+I Engineer}{Santiago, Chile}
-\small
-\textit{www.fracttal.com}
-\begin{itemize}
-    \item Design and manufacturing Fracttal Box \& Fracttal On-Board prototypes, first versions of current Fracttal Sense IoT hardware.
-    \item PCB-Layout Engineer, Operator Neoden4 (Pick and Place Machine), Developer IoT.
-\end{itemize}
-\normalsize
-
-\vspace{6pt}
-
-\cvitem{2016 - 2018}{3D INSIDE}{Technical Support}{Santiago, Chile}
-\small
-\textit{www.3dinside.cl}
-\begin{itemize}
-    \item Technical support for 3D Printer, repair and maintenance (Makerbot, Prusa, Witbox, Formlabs, Mbot 3D, Leapfrog, Ultimaker, BCN3D Sigma, BQ Hephestos).
-\end{itemize}
-\normalsize
-
-\vspace{6pt}
-
-\cvitem{2016 - 2017}{VECZO}{Embedded Systems Programming}{Santiago, Chile}
-\small
-\textit{www.veczo.cl}
-\begin{itemize}
-    \item Programmer of Microcontrollers and embedded systems for projects linked to Myoelectric prostheses (MPLAB XC8 Compiler, PIC).
-\end{itemize}
-\normalsize
-
-\vspace{12pt}
-
-\section{Education \iconGraduation}
-
-\cvitem{2009 - 2014}{Electronic Engineer}{Instituto Universitario Politécnico Santiago Mariño}{Maracay, Venezuela}
-
-\vspace{6pt}
-
-\cvitem{Currently}{Full-Stack Developer / Developer IoT}{Platzi Academia On-line}{\textit{www.platzi.com}}
-
-\vspace{12pt}
-
-\section{Projects \iconLightbulb}
-
-\textbf{Personal Projects:}
-\begin{itemize}
-    \item Warehouse Robot Prototype
-    \item PBOT - Publicity Robot Prototype
-    \item ROSI - Social Interaction Robot Prototype
-    \item Design and manufacture 3D printer Pi851
-\end{itemize}
-
-% ==== COLUMNA DERECHA ====
-\columnbreak
-
-\section{About Me}
-
-\begin{tabular}{@{}ll}
-    \textbf{Name:} & Briceño B. Carlos J. \\
-    \textbf{Nationality:} & Venezuelan \\
-    \textbf{Location:} & Santiago Centro, Chile \\
-    \textbf{Skype:} & carjavi\_skype \\
-    \textbf{LinkedIn:} & linkedin.com/in/carjavi \\
-    \textbf{GitHub:} & github.com/carjavi \\
-\end{tabular}
-
-\vspace{10pt}
-
-\section{Profile Summary}
-
-\small
-\textit{``Senior electronics engineer with many years of work experience passionate about robotics and IoT. Determined not to stop learning every day and try to keep up to date with new technologies that come out every day. I looking for a place that allows me to grow and develop as a professional in both hardware and software, taking advantage of new emerging trends.''}
-\normalsize
-
-\vspace{10pt}
-
-\section{Skills / Tools}
-
-\skillbar{Embedded Developers}{9}
-\vspace{4pt}
-\skillbar{Internet of Things}{8.5}
-\vspace{4pt}
-\skillbar{Design 2D/3D}{7}
-\vspace{4pt}
-\skillbar{Digital Manufacturing}{8.5}
-
-\vspace{12pt}
-
-\noindent \textbf{Tech Stack Icons:} \\
-\small
-JavaScript, Node.js, Python, C++, Arduino, Raspberry Pi, Docker, MongoDB, Photoshop, IoT, Microchip.
-\normalsize
-
-\vspace{12pt}
-
-\section{Languages}
-
-\begin{tabular}{@{}ll}
-    \textbf{Spanish:} & Native \\
-    \textbf{English:} & Competent user \\
-\end{tabular}
-
-\vspace{12pt}
-
-\section{Core Competencies}
-
-\small
-IoT Frontend UI (HTML, CSS, PHP, Bootstrap, React) / Backend (NodeJS, SQLite), Wamp, Javascript, Python, C++, MPLAB, XC8 Compiler, Raspberry Pi, Docker, Mongo DB.
-\normalsize
-
-\end{multicols}
+\end{paracol}
 
 \end{document}

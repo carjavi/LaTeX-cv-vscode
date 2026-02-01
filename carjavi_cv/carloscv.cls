@@ -2,7 +2,7 @@
 % Carlos Briceño <carjavi@hotmail.com>
 % https://carjavi.com
 %% Custom carloscv.cls CV class for Carlos Briceño
-%% Basado en article, optimizado para ATS
+%% ATS-Frendly
 
 %-------------------------------------------------------------------------------
 %                Identification
@@ -23,8 +23,8 @@
     letterpaper,
     left=1.27cm,   % Margen Izquierdo
     right=1.27cm,  % Margen Derecho
-    top=1.1cm,    % Margen Superior
-    bottom=1.27cm  % Margen Inferior
+    top=1cm,    % Margen Superior
+    bottom=1cm  % Margen Inferior
 ]{geometry}
 
 % Paquetes requeridos
@@ -44,15 +44,17 @@
 \definecolor{headerblue}{RGB}{41,128,185}
 \definecolor{darkgray}{RGB}{64,64,64}
 \definecolor{lightgray}{RGB}{128,128,128}
-\definecolor{cvteal}{RGB}{0, 204, 204} % turquesa
+\definecolor{cvteal}{HTML}{6FCCDD} % turquesa
 
 %-------------------------------------------------------------------------------
 %                Configuration for directory locations
 %-------------------------------------------------------------------------------
-% Configure an optional directory location for fonts(default: 'fonts/')
-% Not required anymore but left in place for backward compatability.
 % ==== FUENTES (en carpeta ./fonts) ====
-\setmainfont{MyriadPro-Regular.otf}[Path=fonts/]
+\setmainfont{MyriadPro-Regular.otf}[
+    Path=fonts/,
+    AutoFakeBold=1.5,
+    AutoFakeSlant=0.2
+]
 
 \newfontfamily\namefontA[
     Path=fonts/,
@@ -60,15 +62,21 @@
 
 \newfontfamily\namefontB[
     Path=fonts/,
+    AutoFakeSlant=0.2,
+    AutoFakeBold=1.5
 ]{TitilliumMaps26L003.otf}
 
-\newfontfamily\subtitlefont[
+\newfontfamily\subtitlefont{TitilliumMaps26L003.otf}[
     Path=fonts/,
-]{TitilliumMaps26L003.otf}
+    AutoFakeBold=1.5,
+    AutoFakeSlant=0.2
+]
 
-\newfontfamily\sectionfont[
+\newfontfamily\sectionfont{MyriadPro-Regular.otf}[
     Path=fonts/,
-]{MyriadPro-Regular.otf}
+    BoldFont=MyriadPro-Bold.otf,
+    ItalicFont=MyriadPro-It.otf
+]
 
 \newfontfamily\starjedifont[
     Path=fonts/,
@@ -82,35 +90,37 @@
     pdfborder={0 0 0}
 }
 
-% ==== SECCIONES (MAYÚSCULAS, NEGRAS, MYRIAD REGULAR) ====
-\titleformat{\section}
-  {\sectionfont\Large\bfseries\color{black}}
-  {}
-  {0em}
-  {}
-  [\vspace{2pt}\titlerule]
+% ==== SECCIONES SUBTITULOS (WORK EXPERIENCE, EDUCATION...) ====
+\newlength{\sectionbeforeskip}
+\newlength{\sectionafterskip}
+\setlength{\sectionbeforeskip}{6pt}  % espacio ANTES del título (entre secciones)
+\setlength{\sectionafterskip}{4pt}   % espacio DESPUÉS del título (antes del contenido)
 
-\titleformat{\subsection}
-  {\sectionfont\large\bfseries}
+\titleformat{\section}
+  {\sectionfont\fontsize{12}{15}\selectfont\color{black}}
   {}
   {0em}
   {}
+  [\titlerule] % <-- quité el \vspace{2pt} de aquí
+
+% Esto fuerza el espaciado real del título
+\titlespacing*{\section}
+  {0pt}
+  {\sectionbeforeskip}
+  {\sectionafterskip}
 
 % ==== COMANDOS ====
+% seccion education
 \newcommand{\cvitem}[4]{%
-    \textbf{#1} \hfill {\color{lightgray}#2}\\
-    \textit{#3}\\[0.2em]
-    #4\\[0.5em]
+    \noindent
+    \begin{minipage}{\linewidth}
+        \textbf{#1} \hspace{0.2em} #2\\
+        {\listfont\fontsize{9}{12}\selectfont
+         \hspace*{1.5em}\textcolor{cvteal}{#3}\\
+         \hspace*{1.5em}\textcolor{lightgray}{#4}}
+    \end{minipage}
+    \vspace{0.5em}
 }
-
-\newcommand{\skillbar}[2]{%
-    \sectionfont\textbf{#1} \\
-    \tikz{\fill[cvteal] (0,0) rectangle (#2/10,0.12);
-          \draw[lightgray,thick] (0,0) rectangle (1.0,0.12);}%
-}
-
-% Listas compactas
-\setlist[itemize]{leftmargin=*,noitemsep,topsep=0pt}
 
 % Página
 \pagestyle{empty}

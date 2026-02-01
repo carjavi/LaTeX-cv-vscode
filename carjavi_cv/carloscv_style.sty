@@ -1,5 +1,23 @@
 \ProvidesPackage{carloscv_style}
 
+% --- Paquetes necesarios ---
+\RequirePackage{fontspec} 
+\RequirePackage{xcolor}
+\RequirePackage{enumitem}
+\RequirePackage{fontawesome5}
+\RequirePackage{hyperref}
+
+% --- Definición de Colores ---
+\definecolor{bulletgray}{HTML}{7F8081}
+\definecolor{cvteal}{HTML}{6FCCDD} % turquesa
+
+% --- Definición de Fuentes ---
+\newfontfamily\listfont[
+    Path=fonts/,
+    AutoFakeSlant=0.2,
+    AutoFakeBold=1.5
+]{TitilliumMaps26L003.otf}
+
 % --- Configuración de Hipervínculos ---
 \hypersetup{
     colorlinks=true,
@@ -10,38 +28,31 @@
     pdfsubject={Electronic Engineer CV},
 }
 
-% --- Definición de Iconos (Mapeo a FontAwesome 5) ---
-% Usamos \textcolor{cvteal} para que coincida con tu estética
+% --- Definición de Iconos ---
 \newcommand{\iconEmail}{\textcolor{cvteal}{\faEnvelope}}
 \newcommand{\iconPhone}{\textcolor{cvteal}{\faMobile*}}
 \newcommand{\iconGithub}{\textcolor{cvteal}{\faGithub}}
 \newcommand{\iconLinkedin}{\textcolor{cvteal}{\faLinkedin}}
 \newcommand{\iconGlobe}{\textcolor{cvteal}{\faGlobe}}
-\newcommand{\iconBriefcase}{\textcolor{cvteal}{\faBriefcase}}
-\newcommand{\iconGraduation}{\textcolor{cvteal}{\faGraduationCap}}
-\newcommand{\iconLightbulb}{\textcolor{cvteal}{\faLightbulb}}
+\newcommand{\iconBriefcase}{{\color{black}\fontsize{9}{14}\selectfont\faBriefcase}}
+\newcommand{\iconGraduation}{{\color{black}\fontsize{9}{14}\selectfont\faGraduationCap}}
+\newcommand{\iconLightbulb}{{\color{black}\fontsize{9}{14}\selectfont\faLightbulb}}
+\newcommand{\iconUser}{{\color{black}\fontsize{9}{14}\selectfont\faUser}}
+\newcommand{\iconProfile}{{\color{black}\fontsize{9}{14}\selectfont\faIdCard}}
+\newcommand{\iconSkills}{{\color{black}\fontsize{9}{14}\selectfont\faCogs}}
+\newcommand{\iconInterests}{{\color{black}\fontsize{9}{14}\selectfont\faStar}}
+\newcommand{\iconLanguage}{{\color{black}\fontsize{11}{14}\selectfont\faLanguage}}
 
-
-% Icono personalizado reemplazado por FontAwesome Globe
-\newcommand{\iconCarjavi}[1]{%
-    \textcolor{cvteal}{\faGlobe}%
-}
-
-% --- Configuración de Listas (Itemize) ---
-% Ajustado para que no ocupe demasiado espacio vertical
+% --- Configuración de Listas (Itemize) viñetas---
 \setlist[itemize]{
-    leftmargin=*, 
+    leftmargin=1.5em,
     noitemsep, 
     topsep=2pt, 
     parsep=2pt,
-    label=\textcolor{cvteal}{\tiny$\bullet$}
+    label={\tikz[baseline=-0.6ex]{\fill[black] (0,0) circle (1.5pt);}}, 
+    before={\listfont\fontsize{9}{12}\selectfont} 
 }
 
 % --- Ajustes de Tablas ---
-% Elimina el espacio extra a los lados de las tablas de información
 \setlength{\tabcolsep}{4pt}
 \renewcommand{\arraystretch}{1.2}
-
-% --- Notas para el usuario ---
-% Este archivo requiere que el archivo .cls defina el color 'cvteal'.
-% Si cambias el color en el .cls, se actualizará automáticamente aquí.

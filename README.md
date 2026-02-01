@@ -13,6 +13,7 @@
 - [Table of contents](#table-of-contents)
 - [Porque no usar Overleaf?](#porque-no-usar-overleaf)
 - [Install](#install)
+    - [Recomendaciones al compilar con Latex](#recomendaciones-al-compilar-con-latex)
 
 <br>
 
@@ -36,14 +37,19 @@ Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. <br
 Para Windows MiKTeX: https://miktex.org/download<br>
 > :bulb: **Tip:** En linux esta ***TeX Live full***. https://tug.org/texlive/. (version muy pesada, about 9Gb)
 
+<p align="center"><img src="./img/latex1.png" width="500"   alt=" " /></p>
+
 2. Update Miktek GUI ```(indispensable)```<br>
+
+<p align="center"><img src="./img/latex2.png" width="500"   alt=" " /></p>
+
 por consola:
 ```bash
 miktex-console --check-updates
 miktex-console --update
 ```
 
-3. Instalar Perl (Para que latexmk funcione) 
+1. Instalar Perl (Para que latexmk funcione) 
 Descarga e instala Strawberry Perl: https://strawberryperl.com/ (elige la versión "Recommended")
 
 
@@ -104,6 +110,16 @@ si todo sale bien se creara un archivo .PDF <br>
  ```*.sty ``` Son complementos o "plugins" que añaden funcionalidades específicas. comandos nuevos que no vienen por defecto en LaTeX (manejo de imágenes, colores, márgenes, hipervínculos). <br>
  ```*.cls ``` Es el esqueleto o la estructura global del documento. Se invoca siempre en la primera línea del archivo .tex con el comando \documentclass{nombre_de_la_clase}. clase personalizada (define estilos, colores, comandos como \cvitem, \skillbar).
 
+### Recomendaciones al compilar con Latex
+1. Cierra el PDF en cualquier visor (Adobe/Edge) antes de compilar. 
+2. Desde la consola: 
+```bash
+latexmk -C # debería borrar el PDF sino borra el .pdf manualmente si quedó “enganchado”
+``` 
+3. Recompila desde el boton derecho superior de VScode
+
+
+<br>
 
 <br>
 
