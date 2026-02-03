@@ -198,6 +198,10 @@ Convert your existing resume to an ATS-friendly format: https://resumedogs.com/
 
 Our Free ATS Friendly Resume checker: https://www.atsfriendly.com/
 
+ATS Resume Checker: https://zety.com/
+
+Find Out if Your Resume is ATS-Optimized: https://enhancv.com/
+
 <br>
 
 <br>
