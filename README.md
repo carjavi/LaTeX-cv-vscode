@@ -19,13 +19,13 @@
 - [Keyword para trabajo Remoto](#keyword-para-trabajo-remoto)
 - [Fuentes recomendadas para ATS-friendly](#fuentes-recomendadas-para-ats-friendly)
 - [Recomendaciones](#recomendaciones)
-- [Other Links](#other-links)
+- [Links](#links)
 
 <br>
 
 Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. Fue probado en Windows, pero debria funcionar igual en linux.<br>
 
-```LaTeX``` es un lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc). Un CV mal formateado nunca pasara un ATS, hacerlo en latex garantiza un PDF liviano, mejor formateado, y acto para aprobar un sistema ATS. Poder hacerlo localmente te permitira compilarlo las veces que sea necesario sin pagar nada. 
+```LaTeX``` es un lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc). Un CV mal formateado nunca pasara un ATS, hacerlo en latex garantiza un PDF liviano, mejor formateado y acto para aprobar un sistema ATS. Poder hacerlo localmente te permitira compilarlo las veces que sea necesario sin pagar nada. 
 
 <br>
 
@@ -190,7 +190,7 @@ Work from home | Work from anywhere | Remote | Distributed | Virtual | Home offi
     3. Tus principales fortalezas.
     4. Tu objetivo profesional actual.
 
-# Other Links
+# Links
 
 More information: https://medium.com/@subhanusroy/a-beginners-guide-to-latex-for-ats-friendly-resumes-ab0919930a30
 
