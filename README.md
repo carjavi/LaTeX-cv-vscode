@@ -23,9 +23,9 @@
 
 <br>
 
-Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. <br>
+Compilando mi CV con LaTeX en VScode localmente. ```Optimizado para ATS ```. Fue probado en Windows, pero debria funcionar igual en linux.<br>
 
-```LaTeX``` lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc.). Fue probado en Windows, pero debria funcionar igual en linux.
+```LaTeX``` es un lenguaje de marcado para crear documentos profesionales (PDFs, libros, CVs, tesis, etc). Un CV mal formateado nunca pasara un ATS, hacerlo en latex garantiza un PDF liviano, mejor formateado, y acto para aprobar un sistema ATS. Poder hacerlo localmente te permitira compilarlo las veces que sea necesario sin pagar nada. 
 
 <br>
 
