@@ -14,6 +14,12 @@
 - [Porque no usar Overleaf?](#porque-no-usar-overleaf)
 - [Install](#install)
     - [Recomendaciones al compilar con Latex](#recomendaciones-al-compilar-con-latex)
+- [Uso de keyword Stuffing en el CV, Spaw/Truco?](#uso-de-keyword-stuffing-en-el-cv-spawtruco)
+  - [En mi Opinión](#en-mi-opinión)
+- [Keyword para trabajo Remoto](#keyword-para-trabajo-remoto)
+- [Fuentes recomendadas para ATS-friendly](#fuentes-recomendadas-para-ats-friendly)
+- [Recomendaciones](#recomendaciones)
+- [Other Links](#other-links)
 
 <br>
 
@@ -62,13 +68,13 @@ latexmk -xelatex -synctex=1 -interaction=nonstopmode -file-line-error carjavi_cv
 latexmk -C # limpiar los errores
 ```
 si todo sale bien se creara un archivo .PDF <br>
-> :warning: **Warning:** No se puede compilar con pdflatex, esta configuración trabaja solo con ***XeLaTeX***.
+> :warning: **Warning:** No se puede compilar con pdflatex, esta configuración trabaja solo con ***XeLaTeX***. pdfLaTeX no soporta ciertos estilos de fuentes externas, si se desea una compilación mas general se debe usar LuaLaTeX | XeLaTeX.
  
-5. Instalar extensión en VS Code
+1. Instalar extensión en VS Code
 	1. En VS Code, ve a Extensions ***Ctrl + Shift + X***
 	2. Busca LaTeX Workshop (James-Yu) e instálala
 
-6. Configuración de ***settings.json*** en VScode
+2. Configuración de ***settings.json*** en VScode
    1. Presiona la combinación de teclas ***Ctrl + Shift + P*** para abrir la paleta de comandos.
    2. Escribe la palabra ***json***
    3. Selecciona la opción que dice: ***Preferences: Open User Settings (JSON)***
@@ -100,7 +106,7 @@ si todo sale bien se creara un archivo .PDF <br>
 
    5. Guarda con Ctrl + S
 
-7. Listo para Compilar en VScode
+3. Listo para Compilar en VScode
    1. Abre tu archivo ***name-latex-file.tex***
    2. Presiona ***Ctrl + Alt + B*** (o busca "Build" en la paleta de comandos).
    3. Debería compilar con latexmk -xelatex automáticamente y generar el archivo .PDF
@@ -116,8 +122,81 @@ si todo sale bien se creara un archivo .PDF <br>
 ```bash
 latexmk -C # debería borrar el PDF sino borra el .pdf manualmente si quedó “enganchado”
 ``` 
-3. Recompila desde el boton derecho superior de VScode
+3. Recompila desde el boton derecho superior de VScode "play"
 
+
+<br>
+
+<br>
+
+<p align="center"><img src="./img/latex_ats.png" width="500"   alt=" " /></p>
+
+Los ATS (Sistema de Seguimiento de Candidatos) usan Parsing / NLP (resume parsing) para reconocer patrones en los layout de los CVs, por eso el PDF generado debe muy limpio y estándar en texto y estructura. Los reclutadores saben lo que quieren ver en un currículum y le dicen a los filtros ATS qué palabras clave tienen que formar parte de todos los que vayan a ser escogidos. Los programas ATS, incluso, pueden ordenar a los candidatos en función del número de veces que un término aparece.
+
+Mejorar la compatibilidad para ATS (Applicant Tracking Systems):
+1. Pocos iconos. igual los ATS los ignoran, pero archivos .SVG requiere librería que pueden corromper el PDF
+2. No poner foto, imágenes o graficos
+3. Usar fuentes estándar. intentar no usar fuentes externos. los ATS pueden pasar por alto las letras en una fuente decorativa, lo que hace que su contenido sea difícil de analizar
+4. Usar títulos y encabezados claros en inglés o muy típicos. Ejemplo: “Work Experience” mejor que “Trayectoria profesional”. Otros Education, Experience, Skills etc
+5. Evitar diseños raros, colores extremos
+6. Intentar mantener el contenido en una sola columna o estructura simple
+7. Pocas tablas complejas
+8. Fechas y puestos en formatos estándar: Jan 2022 – Mar 2024, 2022-01 – 2024-03
+9. Evitar iconos en vez de texto
+10. las Keywords de los reclutadores deben agregarse especialmente en “Skills” y “Experience” 
+11. Usa viñetas claras para describir logros y tareas
+
+> :memo: **Note:** 
+1. Algunos sistemas parsean mucho mejor DOCX que PDF (conviene tener las 2 versiones)
+2. Si apuntas a portales globales, un CV en inglés suele parsearse mejor
+3. A ciencia cierta, nunca se puede saber cómo un sistema ATS va a leer un currículum
+
+# Uso de keyword Stuffing en el CV, Spaw/Truco?
+
+El keyword stuffing literalmente significa "relleno de palabras clave". Es una práctica de Black Hat SEO consistente en la repetición excesiva e innatural de palabras clave (keywords) dentro de un contenido web, metaetiquetas, títulos o hasta CVs, para aumentar la visibilidad o para pasa un ATS sin tener todas las competencias que requiere el reclutador. Se suele hacer ocultando las palabras clave usando el mismo color de letra que el fondo así no mas!. 
+
+Consecuencias:
+1. Podría ser ignorado por algunos parsers que limpian contenido “no visible”.
+2. Podría levantar banderas por patrones raros 
+3. En internet se habla de penalización, pero básicamente es que te descarten en la selección. 
+
+## En mi Opinión 
+Podría ayudar a que los ATS vean ciertas palabras en que no están bien identificadas en el CV porque están representados por iconos o porque por estética del CV sean confusas para el ATS. La idea seria en no abusar de ellas, pero si no se incluyen las palabras que quieren en Recursos Humanos, estás fuera! 
+
+# Keyword para trabajo Remoto
+Herramientas que piden dominar en entrevistas de trabajo remoto, herramientas para gestión de tareas y proyectos, herramientas para comunicación remota asincrónica y sincrónica:
+```
+Work from home | Work from anywhere | Remote | Distributed | Virtual | Home office | Slack | Zoom | Microsoft Teams | Trello | Jira | Asana | Google Drive | Dropbox | GitHub | GitLab | Figma | Mural | Self-discipline | Communication | Initiative | Adaptability | Collaboration tools | Cloud
+```
+
+# Fuentes recomendadas para ATS-friendly
+1. Times New Roman
+2. Tahoma
+3. Verdana
+4. Arial
+5. Helvética
+6. Calibri
+7. Georgia
+8. Cambría
+9. Gill Sans
+10. Garamond
+
+# Recomendaciones 
+* Si tu currículum tiene mucho contenido, puedes intentar reducir los márgenes en un cuarto de pulgada cada vez. Lo ideal es que nunca sean menos de 0,5"/1.27cm/12.7mmm
+
+* PROFILE SUMMARY Es lo primero que leerá un reclutador y lo que determinará si sigue leyendo o no. Se trata de un resumen de 3 a 5 líneas donde respondes:
+    1. Quién eres a nivel laboral (profesión o área).
+    2. En qué te has especializado.
+    3. Tus principales fortalezas.
+    4. Tu objetivo profesional actual.
+
+# Other Links
+
+More information: https://medium.com/@subhanusroy/a-beginners-guide-to-latex-for-ats-friendly-resumes-ab0919930a30
+
+Convert your existing resume to an ATS-friendly format: https://resumedogs.com/
+
+Our Free ATS Friendly Resume checker: https://www.atsfriendly.com/
 
 <br>
 
