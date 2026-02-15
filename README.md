@@ -14,6 +14,9 @@
 - [Porque no usar Overleaf?](#porque-no-usar-overleaf)
 - [Install](#install)
     - [Recomendaciones al compilar con Latex](#recomendaciones-al-compilar-con-latex)
+- [ATS-Safe](#ats-safe)
+- [En experiencia laboral](#en-experiencia-laboral)
+- [Las Fechas en los CV para ATS frendly](#las-fechas-en-los-cv-para-ats-frendly)
 - [Uso de keyword Stuffing en el CV, Spaw/Truco?](#uso-de-keyword-stuffing-en-el-cv-spawtruco)
   - [En mi Opinión](#en-mi-opinión)
 - [Keyword para trabajo Remoto](#keyword-para-trabajo-remoto)
@@ -129,6 +132,8 @@ latexmk -C # debería borrar el PDF sino borra el .pdf manualmente si quedó “
 
 <br>
 
+# ATS-Safe
+
 <p align="center"><img src="./img/latex_ats.png" width="500"   alt=" " /></p>
 
 Los ATS (Sistema de Seguimiento de Candidatos) usan Parsing / NLP (resume parsing) para reconocer patrones en los layout de los CVs, por eso el PDF generado debe muy limpio y estándar en texto y estructura. Los reclutadores saben lo que quieren ver en un currículum y le dicen a los filtros ATS qué palabras clave tienen que formar parte de todos los que vayan a ser escogidos. Los programas ATS, incluso, pueden ordenar a los candidatos en función del número de veces que un término aparece.
@@ -151,6 +156,49 @@ Mejorar la compatibilidad para ATS (Applicant Tracking Systems):
 2. Si apuntas a portales globales, un CV en inglés suele parsearse mejor
 3. A ciencia cierta, nunca se puede saber cómo un sistema ATS va a leer un currículum
 
+<br>
+
+# En experiencia laboral 
+Se colocan resultados, no tareas, se colocan en bullet y hay una regla, cada bullet responde ***¿para qué sirvió?*** ***¿que se consiguió con esto?***. En la mentalidad del reclutador; Una tarea dice qué hacías | Un logro dice qué valor generaste. Fórmula práctica: ```Acción + tecnología + impacto (resultado / contexto real)``` <br>
+
+Si no tienes métricas duras, usa:<br>
+* contexto crítico (mining, industrial, field)
+* alcance (prototypes, first versions, production-ready)
+* impacto operativo (reliability, deployment, validation)
+  
+Ejemplos de verbos fuertes (úsalos): <br>
+* Designed
+* Implemented
+* Deployed
+* Enabled
+* Supported
+* Contributed to
+* Accelerated
+* Improved
+* Validated
+* Engineerd
+* Developed
+* Integrated
+* Optimized
+* Conducted
+* Collabored
+* Authored
+  
+
+<br>
+
+# Las Fechas en los CV para ATS frendly
+Los meses abreviados a 3 letras son estándar (Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec). <br>
+Un ATS moderno sí los entiende, siempre que:
+* Estén en inglés.
+* El formato sea claro, por ejemplo: Jan 2022 – Mar 2024 o Mar 2024
+  
+Riesgos reales: <br>
+* Abreviarlos en español (Ene, Feb, Mar…) → algunos ATS fallan.
+* Usar formatos raros o mezclados.
+
+<br>
+
 # Uso de keyword Stuffing en el CV, Spaw/Truco?
 
 El keyword stuffing literalmente significa "relleno de palabras clave". Es una práctica de Black Hat SEO consistente en la repetición excesiva e innatural de palabras clave (keywords) dentro de un contenido web, metaetiquetas, títulos o hasta CVs, para aumentar la visibilidad o para pasa un ATS sin tener todas las competencias que requiere el reclutador. Se suele hacer ocultando las palabras clave usando el mismo color de letra que el fondo así no mas!. 
@@ -166,7 +214,7 @@ Podría ayudar a que los ATS vean ciertas palabras en que no están bien identif
 # Keyword para trabajo Remoto
 Herramientas que piden dominar en entrevistas de trabajo remoto, herramientas para gestión de tareas y proyectos, herramientas para comunicación remota asincrónica y sincrónica:
 ```
-Work from home | Work from anywhere | Remote | Distributed | Virtual | Home office | Slack | Zoom | Microsoft Teams | Trello | Jira | Asana | Google Drive | Dropbox | GitHub | GitLab | Figma | Mural | Self-discipline | Communication | Initiative | Adaptability | Collaboration tools | Cloud
+Work from home | Work from anywhere | Remote | Distributed | Virtual | Home office | Slack | Zoom | Microsoft Teams | Trello | Jira | Asana | Google Drive | Dropbox | GitHub | GitLab | Figma | Mural | Self-discipline | Communication | Initiative | Adaptability | Collaboration tools | Cloud | freelance Developer 
 ```
 
 # Fuentes recomendadas para ATS-friendly
