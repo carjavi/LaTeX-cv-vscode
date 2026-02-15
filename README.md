@@ -15,7 +15,8 @@
 - [Install](#install)
     - [Recomendaciones al compilar con Latex](#recomendaciones-al-compilar-con-latex)
 - [ATS-Safe](#ats-safe)
-- [En experiencia laboral](#en-experiencia-laboral)
+- [En la Experiencia Laboral](#en-la-experiencia-laboral)
+- [Lenguaje Adecuado](#lenguaje-adecuado)
 - [Las Fechas en los CV para ATS frendly](#las-fechas-en-los-cv-para-ats-frendly)
 - [Uso de keyword Stuffing en el CV, Spaw/Truco?](#uso-de-keyword-stuffing-en-el-cv-spawtruco)
   - [En mi Opinión](#en-mi-opinión)
@@ -158,7 +159,7 @@ Mejorar la compatibilidad para ATS (Applicant Tracking Systems):
 
 <br>
 
-# En experiencia laboral 
+# En la Experiencia Laboral 
 Se colocan resultados, no tareas, se colocan en bullet y hay una regla, cada bullet responde ***¿para qué sirvió?*** ***¿que se consiguió con esto?***. En la mentalidad del reclutador; Una tarea dice qué hacías | Un logro dice qué valor generaste. Fórmula práctica: ```Acción + tecnología + impacto (resultado / contexto real)``` <br>
 
 Si no tienes métricas duras, usa:<br>
@@ -183,7 +184,10 @@ Ejemplos de verbos fuertes (úsalos): <br>
 * Conducted
 * Collabored
 * Authored
-  
+* Led the end-to-end manufacturing
+
+# Lenguaje Adecuado
+Trata de omitido ***repair*** y ya eres ingeniero porque ***maintenance*** y ***technical lifecycle*** ya lo cubren de forma más profesional. Un ingeniero ***mantiene y optimiza***, un técnico ***repara***. Mantén el lenguaje de ingeniero. 
 
 <br>
 
