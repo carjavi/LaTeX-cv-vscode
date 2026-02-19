@@ -14,15 +14,16 @@
 - [Porque no usar Overleaf?](#porque-no-usar-overleaf)
 - [Install](#install)
     - [Recomendaciones al compilar con Latex](#recomendaciones-al-compilar-con-latex)
-- [ATS-Safe](#ats-safe)
+- [CV ATS-Safe \& Optimizado](#cv-ats-safe--optimizado)
 - [En la Experiencia Laboral](#en-la-experiencia-laboral)
-- [Lenguaje Adecuado](#lenguaje-adecuado)
+    - [Promt para ayudar a convertir tareas en logros](#promt-para-ayudar-a-convertir-tareas-en-logros)
+    - [Lenguaje Adecuado](#lenguaje-adecuado)
 - [Las Fechas en los CV para ATS frendly](#las-fechas-en-los-cv-para-ats-frendly)
-- [Uso de keyword Stuffing en el CV, Spaw/Truco?](#uso-de-keyword-stuffing-en-el-cv-spawtruco)
-  - [En mi Opinión](#en-mi-opinión)
 - [Keyword para trabajo Remoto](#keyword-para-trabajo-remoto)
 - [Fuentes recomendadas para ATS-friendly](#fuentes-recomendadas-para-ats-friendly)
 - [Recomendaciones](#recomendaciones)
+- [Uso de keyword Stuffing en el CV, Spaw/Truco?](#uso-de-keyword-stuffing-en-el-cv-spawtruco)
+  - [En mi Opinión](#en-mi-opinión)
 - [Links](#links)
 
 <br>
@@ -133,7 +134,7 @@ latexmk -C # debería borrar el PDF sino borra el .pdf manualmente si quedó “
 
 <br>
 
-# ATS-Safe
+# CV ATS-Safe & Optimizado
 
 <p align="center"><img src="./img/latex_ats.png" width="500"   alt=" " /></p>
 
@@ -168,25 +169,33 @@ Si no tienes métricas duras, usa:<br>
 * impacto operativo (reliability, deployment, validation)
   
 Ejemplos de verbos fuertes (úsalos): <br>
+* Co-developed "Participé en el desarrollo… "
 * Designed
 * Implemented
 * Deployed
 * Enabled
 * Supported
+* Provided specialized technical support "Se brindó soporte técnico especializado..."
 * Contributed to
 * Accelerated
 * Improved
 * Validated
 * Engineerd
 * Developed
+* Developed first functional version "Desarrollé la primera versión funcional..."
 * Integrated
 * Optimized
 * Conducted
 * Collabored
 * Authored
-* Led the end-to-end manufacturing
+* Led the end-to-end manufacturing "Lideré la fabricación integral de..."
 
-# Lenguaje Adecuado
+### Promt para ayudar a convertir tareas en logros
+```
+Actúa como un reclutador técnico senior con experiencia en la evaluación de perfiles de ingeniería y tecnología en distintos sectores, con dominio de sistemas ATS y redacción de CV de alto impacto. Comprende lenguaje técnico, valora experiencia práctica y en I+D, que sabe identificar aportes reales en entornos industriales, tecnológicos y multidisciplinarios. Quiero mejorar los bullets de mi experiencia laboral para mi CV. Te entregaré descripciones de tareas y debes convertirlas en logros usando la estructura: acción + tecnología utilizada + impacto (resultado o contexto real). No tengo métricas cuantitativas, así que utiliza verbos de acción fuertes y destaca alcance técnico, aplicación en entornos reales y valor operativo sin inventar información. Si el bullet no muestra impacto, pregúntame brevemente si resolví algún problema, logré algún resultado o usé tecnologías adicionales. Mantén cada bullet conciso, ATS-friendly y técnicamente creíble. Entrégame cada resultado en inglés y español con menos de 20 palabras y un maximo de 28.
+```
+
+### Lenguaje Adecuado
 Trata de omitido ***repair*** y ya eres ingeniero porque ***maintenance*** y ***technical lifecycle*** ya lo cubren de forma más profesional. Un ingeniero ***mantiene y optimiza***, un técnico ***repara***. Mantén el lenguaje de ingeniero. 
 
 <br>
@@ -202,18 +211,6 @@ Riesgos reales: <br>
 * Usar formatos raros o mezclados.
 
 <br>
-
-# Uso de keyword Stuffing en el CV, Spaw/Truco?
-
-El keyword stuffing literalmente significa "relleno de palabras clave". Es una práctica de Black Hat SEO consistente en la repetición excesiva e innatural de palabras clave (keywords) dentro de un contenido web, metaetiquetas, títulos o hasta CVs, para aumentar la visibilidad o para pasa un ATS sin tener todas las competencias que requiere el reclutador. Se suele hacer ocultando las palabras clave usando el mismo color de letra que el fondo así no mas!. 
-
-Consecuencias:
-1. Podría ser ignorado por algunos parsers que limpian contenido “no visible”.
-2. Podría levantar banderas por patrones raros 
-3. En internet se habla de penalización, pero básicamente es que te descarten en la selección. 
-
-## En mi Opinión 
-Podría ayudar a que los ATS vean ciertas palabras en que no están bien identificadas en el CV porque están representados por iconos o porque por estética del CV sean confusas para el ATS. La idea seria en no abusar de ellas, pero si no se incluyen las palabras que quieren en Recursos Humanos, estás fuera! 
 
 # Keyword para trabajo Remoto
 Herramientas que piden dominar en entrevistas de trabajo remoto, herramientas para gestión de tareas y proyectos, herramientas para comunicación remota asincrónica y sincrónica:
@@ -241,6 +238,22 @@ Work from home | Work from anywhere | Remote | Distributed | Virtual | Home offi
     2. En qué te has especializado.
     3. Tus principales fortalezas.
     4. Tu objetivo profesional actual.
+
+<br>
+
+# Uso de keyword Stuffing en el CV, Spaw/Truco?
+
+El keyword stuffing literalmente significa "relleno de palabras clave". Es una práctica de Black Hat SEO consistente en la repetición excesiva e innatural de palabras clave (keywords) dentro de un contenido web, metaetiquetas, títulos o hasta CVs, para aumentar la visibilidad o para pasa un ATS sin tener todas las competencias que requiere el reclutador. Se suele hacer ocultando las palabras clave usando el mismo color de letra que el fondo así no mas!. 
+
+Consecuencias:
+1. Podría ser ignorado por algunos parsers que limpian contenido “no visible”.
+2. Podría levantar banderas por patrones raros 
+3. En internet se habla de penalización, pero básicamente es que te descarten en la selección. 
+
+## En mi Opinión 
+Podría ayudar a que los ATS vean ciertas palabras en que no están bien identificadas en el CV porque están representados por iconos o porque por estética del CV sean confusas para el ATS. La idea seria en no abusar de ellas, pero si no se incluyen las palabras que quieren en Recursos Humanos, estás fuera! 
+
+<br>
 
 # Links
 
